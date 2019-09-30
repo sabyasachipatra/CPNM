@@ -1,0 +1,70 @@
+cluster:1
+GroEL  RpoA  RpoB  RpoZ  NusA  RpoC  RpoD  Rsd  RpoN  FliA  
+cluster:2
+MalG  MalK  MalF  
+cluster:3
+SbcC  Gam  RecB  Abc2  SbcD  
+cluster:4
+Ssb  MucA  MucB  
+cluster:5
+FliG  FliF  Hns  
+cluster:6
+AtpB  AtpA  AtpG  AtpE  AtpH  AtpL  AtpB(A)  AtpF  
+cluster:7
+Pal  TolB  TolA  OmpF  TolR  TolQ  TonB  OmpA  
+cluster:8
+RpsT  SpeF  RpmH  SpeA  
+cluster:9
+TrxA  Cdk2  TrxB  
+cluster:10
+NrdB  NrdA  NrdF  NrdE  
+cluster:11
+CheA  CheY  CheZ  
+cluster:12
+DnaK  GrpE  Eno  Pnp  Rne  DnaJ  RpoH  
+cluster:13
+PtsH  Crr  GlpK  LacY  GlgP  Mlc  PtsG  
+cluster:14
+DnaK  GrpE  Eno  Pnp  Rne  RhlB  DnaJ  RpoH  
+cluster:15
+RpoA  RpoB  RpoZ  RpoC  RpoD  Rsd  RpoN  FliA  
+cluster:16
+Fdx  YfhF  NifU  HscB  HscA  
+cluster:17
+MalT  Aes  MelA  MalY  
+cluster:18
+SecA  SecY  SecE  SecG  
+cluster:19
+TraK  TraV  TraB  
+cluster:20
+MutL  MutS  MutH  UvrD  
+cluster:21
+CcmE  CcmF  CcmH  
+cluster:22
+TatB  TatA  TatC  
+cluster:23
+HlyB  HlyD  HlyA  
+cluster:24
+Pal  TolB  TolA  OmpF  TolR  TolQ  ExbB  TonB  ExbD  OmpA  
+cluster:25
+DnaA  RepA  Pir  
+cluster:26
+HsdS  HsdM  HsdR  
+cluster:27
+MoaD  MoeB  MoaE  
+cluster:28
+FtsQ  FtsK  FtsI  FtsL  FtsN  FtsW  
+cluster:29
+GlnK  GlnB  GlnL  
+cluster:30
+ClpS  ClpA  ClpP  
+cluster:31
+FrdB  FrdA  FrdC  FrdD  
+cluster:32
+Mog  MoeA  MobA  MobB  
+cluster:33
+SdhB  SdhD  SdhC  
+cluster:34
+CusB  CusF  CusC  
+cluster:35
+DnaX  DnaE  HolA  HolB  HolD  HolC  DnaN  

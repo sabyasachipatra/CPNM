@@ -1,0 +1,90 @@
+modet: network motif discovery using expansion tree
+Version: 0.1
+
+Sabyasachi Patra - IIIT Bhubaneswar, Odisha, India
+sabyasachi@iiit-bh.ac.in
+----------------------------------------------------
+
+This software package is used to count number of occurrences of subgraphs in a target network, and taking the decision on network motifs.
+
+You can find more about it on the following url:
+****************
+
+----------------------------------------------------
+License
+
+This software uses the nauty program version 2.4 by Brendan McKay (http://cs.anu.edu.au/~bdm/nauty/).
+Therefore, nauty's license restrictions also apply to the usage of modet.
+Nauty files are included in the "nauty" directory.
+
+----------------------------------------------------
+INSTALL
+
+Just use 'make'
+[Tested with Ubuntu 16.04 and GCC 8.2)
+
+If you have any trouble compiling, please contact the author.
+
+----------------------------------------------------
+VERY SHORT MANUAL
+
+Examples of usage
+
+OMPILE
+-------
+You should compile the program using make command.
+make
+
+RUN
+---
+You should call the program like this:
+./run -m[--method] method_name -s[--size] motif_size -g[--graph] real_graph
+
+Possible Options
+
+ - [-s <int>] or [--size <int>]
+   motif size to consider (mandatory)
+
+ - [-g <file>] or [--graph <file>]
+   File containing the graph (mandatory)
+
+ - [-m <string>] or [--method <string>]
+   Method for searching for motifs. 'method' can be: (mandatory)
+   . "modet": Motif discovery using Expansion tree
+   . "mdet": Motif discovery using Dynamic Expansion Tree (DET)
+
+ - [-r <int>] or [--random <int>]
+   Number of random networks to generate. (default is 0)
+   Leave at zero to just compute frequency.
+
+ - [-e <int>] or [--rexchanges <int>]
+   Number of exchanges per edge on randomization. (default is 2)
+
+ - [-t <int>] or [--tries <int>]
+   Number of tries per edge on randomization. (default is 7)
+   
+ - [-th <int>] or [--threshold <int>]
+   Threshold Frequency set as percentage of order of the network. (default is 5)
+
+------------------------------------------------------------------------------------
+valid method_name: modet | mdet
+valid motif_size:
+		modet: 3-10
+		mdet: 3-15
+valid real_graph: text file containing real network in simple interaction format(SIP) is acceptable
+
+example: ./run -m modet -s 3 -g sample.txt
+
+example of SIP format (undirected graph)
+----------------------------------------
+node node weight
+1     6     1
+1     7     1
+2     4     1
+2     3     1
+3     5     1
+4     5     1
+5     7     1
+6     7     1
+
+Note: Above network contain 7 nodes and 8 edges
