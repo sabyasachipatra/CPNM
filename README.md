@@ -1,1 +1,1 @@
-"# CPNM" 
+Read the README file
