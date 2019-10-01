@@ -40,9 +40,9 @@ int main(int argc, char **argv)
 	//Print
 	for (i=0; i<LENGTH; i++) {
 		for (int j=0; j<SIZE; j++) {
-			printf("%10.7f  ", A[i][j]);
+			//printf("%10.7f  ", A[i][j]);
 		}
-		printf("\n");
+		//printf("\n");
     	}
 	//Column Normalize
 	for (int j=0; j<SIZE; j++) {
@@ -57,9 +57,9 @@ int main(int argc, char **argv)
 	//Print
 	for (i=0; i<LENGTH; i++) {
 		for (int j=0; j<SIZE; j++) {
-			printf("%10.7f  ", A[i][j]);
+			//printf("%10.7f  ", A[i][j]);
 		}
-		printf("\n");
+		//printf("\n");
     	}
 	//Write
 	for (i=0; i<LENGTH; i++) {

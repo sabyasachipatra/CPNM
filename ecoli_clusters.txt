@@ -1,70 +1,64 @@
 cluster:1
-GroEL  RpoA  RpoB  RpoZ  NusA  RpoC  RpoD  Rsd  RpoN  FliA  
+GroEL  Ssb  DnaK  GrpE  Eno  NusA  RecA  Pnp  Rne  RhlB  MucA  DnaJ  RpoH  
 cluster:2
-MalG  MalK  MalF  
+MalG  MalE  MalK  MalF  
 cluster:3
-SbcC  Gam  RecB  Abc2  SbcD  
+RecR  RecO  Ssb  RecF  RecA  SbcB  DinI  UmuD  CI  LexA  MucA  MucB  
 cluster:4
-Ssb  MucA  MucB  
-cluster:5
-FliG  FliF  Hns  
-cluster:6
 AtpB  AtpA  AtpG  AtpE  AtpH  AtpL  AtpB(A)  AtpF  
-cluster:7
-Pal  TolB  TolA  OmpF  TolR  TolQ  TonB  OmpA  
-cluster:8
+cluster:5
+TolB(P)  Pal  CeaC  OmpA  CeiC  
+cluster:6
 RpsT  SpeF  RpmH  SpeA  
-cluster:9
-TrxA  Cdk2  TrxB  
-cluster:10
+cluster:7
 NrdB  NrdA  NrdF  NrdE  
-cluster:11
-CheA  CheY  CheZ  
-cluster:12
-DnaK  GrpE  Eno  Pnp  Rne  DnaJ  RpoH  
-cluster:13
-PtsH  Crr  GlpK  LacY  GlgP  Mlc  PtsG  
-cluster:14
+cluster:8
+FtsZ  ZipA  FtsA  SulA  MinC  DicB  
+cluster:9
+FliM  FliG  FliF  Hns  FliN  CheA  CheY  ArcB  CheZ  
+cluster:10
 DnaK  GrpE  Eno  Pnp  Rne  RhlB  DnaJ  RpoH  
+cluster:11
+Eno  Pnp  Rne  RhlB  
+cluster:12
+DnaK  GrpE  RpoA  RpoB  RpoZ  NusA  RpoC  RpoD  RpoH  Rsd  MelR  RpoN  FliA  
+cluster:13
+DnaK  GrpE  RpoZ  NusA  Pnp  RpoC  RpoD  DnaJ  RpoH  Rsd  MelR  RpoN  FliA  
+cluster:14
+Fdx  YfhF  NifU  IscS  HscB  Cd44  
 cluster:15
-RpoA  RpoB  RpoZ  RpoC  RpoD  Rsd  RpoN  FliA  
+SecA  SecY  SecB  SecE  SecG  
 cluster:16
-Fdx  YfhF  NifU  HscB  HscA  
+TolB(P)  Pal  TolB  TolA  OmpF  TolR  TolQ  ExbB  TonB  ExbD  BtuB  FhuA  OmpA  
 cluster:17
-MalT  Aes  MelA  MalY  
+MutL  Vsr  MutS  MutH  UvrD  
 cluster:18
-SecA  SecY  SecE  SecG  
+RseB  RseA  RpoE  
 cluster:19
-TraK  TraV  TraB  
+HlyB  HlyD  HlyA  TolC  
 cluster:20
-MutL  MutS  MutH  UvrD  
+Fdx  YfhF  NifU  IscS  HscB  HscA  Cd44  
 cluster:21
-CcmE  CcmF  CcmH  
+TolA  YbgF  OmpF  TolR  TolQ  
 cluster:22
-TatB  TatA  TatC  
+TolB(P)  Pal  CeaC  ExbB  TonB  ExbD  BtuB  FhuA  FepA  OmpA  FecA  FecR  
 cluster:23
-HlyB  HlyD  HlyA  
-cluster:24
-Pal  TolB  TolA  OmpF  TolR  TolQ  ExbB  TonB  ExbD  OmpA  
-cluster:25
-DnaA  RepA  Pir  
-cluster:26
 HsdS  HsdM  HsdR  
-cluster:27
-MoaD  MoeB  MoaE  
-cluster:28
-FtsQ  FtsK  FtsI  FtsL  FtsN  FtsW  
-cluster:29
-GlnK  GlnB  GlnL  
-cluster:30
-ClpS  ClpA  ClpP  
-cluster:31
+cluster:24
+FtsZ  ZipA  SecA  SecY  FtsA  SecE  SecG  FtsQ  FtsK  FtsI  FtsL  FtsN  FtsW  
+cluster:25
+GlnK  GlnB  GlnL  GlnG  AspA  
+cluster:26
 FrdB  FrdA  FrdC  FrdD  
-cluster:32
+cluster:27
 Mog  MoeA  MobA  MobB  
-cluster:33
-SdhB  SdhD  SdhC  
-cluster:34
-CusB  CusF  CusC  
-cluster:35
-DnaX  DnaE  HolA  HolB  HolD  HolC  DnaN  
+cluster:28
+SdhB  SdhA  SdhD  SdhC  
+cluster:29
+DnaB  Tus  DnaC  DnaA  DnaX  DnaQ  DnaE  HolA  HolB  HolD  HolC  DnaN  
+cluster:30
+FtsZ  ZipA  FtsA  SulA  MinC  DicB  FtsK  FtsL  
+cluster:31
+FtsZ  ZipA  FtsA  SulA  MinC  DicB  FtsK  FtsI  FtsL  FtsN  FtsW  
+cluster:32
+DnaQ  DnaE  HolE  DnaN  

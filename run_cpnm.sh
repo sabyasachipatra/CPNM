@@ -25,5 +25,5 @@ rm temp.txt
 featureFile="$workDir"/norm_feature34.txt""
 clusterFile="$workDir"/ecoli_clusters.txt""
 cd cpnm
-./run -g $inputGraph -d $dictionary -f $featureFile -c $clusterFile -wa 50
+./run -g $inputGraph -d $dictionary -f $featureFile -c $clusterFile -t 20
 cd ..
