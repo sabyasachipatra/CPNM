@@ -29,15 +29,24 @@ If you have any trouble compiling, please contact the author.
 ----------------------------------------------------
 VERY SHORT MANUAL
 
-Examples of usage
+conversion
+--------------------------------------------------------------------------
+You should compile the program conversion.cpp using g++
+	g++ conversion.cpp -o conversion.exe
+You should run the program with arguments
+	usage: ./conversion.exe inputFile outputFile dictionary
+example:
+	./conversion.exe ecoli_intr.txt ecoli_intr_enum.txt ecoli_dictionary.txt
 
-COMPILE
--------
-You should compile the modet using make command.
-make
+
 **************************************************************************
 *                                MODET                                   *
 **************************************************************************
+compile
+-------
+You should compile the modet using make command.
+make
+
 You should call the program like this:
 ./run -m[--method] method_name -s[--size] motif_size -g[--graph] real_graph
 
@@ -92,15 +101,6 @@ node node weight
 
 Note: Above network contain 7 nodes and 8 edges
 **************************************************************************
-
-conversion
---------------------------------------------------------------------------
-You should compile the program conversion.cpp using g++
-	g++ conversion.cpp -o conversion.exe
-You should run the program with arguments
-	usage: ./conversion.exe inputFile outputFile dictionary
-example:
-	./conversion.exe ecoli_intr.txt ecoli_intr_enum.txt ecoli_dictionary.txt
 
 concatenate
 --------------------------------------------------------------------------
