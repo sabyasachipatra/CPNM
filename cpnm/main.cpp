@@ -56,9 +56,11 @@ int main(int argc, char **argv) {
 // Initialize everything
 void initialize() {
     nf = -1;
-    wadj = 0.5;
+    tMapper = 0.2;
     snprintf(graph_file, strlen("none")+1, "%s\n", "none");
+    snprintf(dictionary_file, strlen("none")+1, "%s\n", "none");
     snprintf(feature_file, strlen("none")+1, "%s\n", "none");
+    snprintf(cluster_file, strlen("none")+1, "%s\n", "none");
     FILE *fp;
     fp = fopen("Output.txt", "w");
     fprintf(fp, "OUTPUT");
@@ -127,7 +129,9 @@ void prepare_graph() {
     Graph::readFeatureFile(g, FMat, nf, feature_file);
     // Print chosen parameters
     printf("graph file: %s\n", graph_file);
+    printf("dictionary file: %s\n", dictionary_file);
     printf("feature file: %s\n", feature_file);
+    printf("clusters file: %s\n", cluster_file);
     printf("%d nodes, %d edges\n", g->numberNodes(), g->numberEdges());
     std::cout << "nf=" << nf << "\n";
     for (i=0; i<g->numberNodes(); i++) {
@@ -140,7 +144,8 @@ void prepare_graph() {
 
 // Compute cluster
 void compute_cluster() {
-    int i, j, k, m, flag;
+    int i, j, j1, k, m, flag;
+    float wtol=0.0;
     // Log Normalize Features
     //log_normalize();
     // Compute Weights
@@ -167,7 +172,6 @@ void compute_cluster() {
         int clusSize=0;
         clus[0]=i;
         clusSize++;
-        flag=0;
         while (1) {
             //std::cout << "clusSize=" << clusSize << "\n";
             float minDist=999999.0;
@@ -185,32 +189,49 @@ void compute_cluster() {
                     if (present==1) {
                         continue;
                     }
-                    //Compute distance between clus[j] and neiA[k]
-                    if (Dist[clus[j]][neiA[k]] < minDist) {
-                        minDist=Dist[clus[j]][neiA[k]];
+		    float sumDist=0.0;
+		    //Compute distance between cluster and neiA[k]
+                    for (j1=0; j1<clusSize; j1++) {
+                        sumDist+=Dist[clus[j1]][neiA[k]]/clusSize;
+                    }
+                    //Test min distance between cluser and neiA[k]
+                    if (sumDist < minDist) {
+                        minDist=sumDist;
                         a=clus[j];
                         b=neiA[k];
                     }
                 }
             }
             if (b==-1) break;
-            float avgWeight=0, newWeight;
+            float avgWeight=0.0, newWeight=0.0;
             for (j=0; j<clusSize; j++) {
-                avgWeight = avgWeight + Weight[clus[j]]/clusSize;
+                avgWeight += Weight[clus[j]]/clusSize;
             }
-            //std::cout << "a=" << a << "  " << Weight[a] << "  b=" << b << "  " << Weight[b] << "  avgWeight=" << avgWeight << "\n";
-            newWeight = Weight[b];
-            if (newWeight <= (1/wadj)*avgWeight && newWeight >= wadj*avgWeight) {
-                flag=1;
+            //std::cout<< avgWeight << "  ";
+            //std::cout << "a=" << a << "  " << Weight[a] << "  b=" << b << "  " << Weight[b] << "\n";
+            for (j=0; j<clusSize; j++) {
+                newWeight += Weight[clus[j]]/(clusSize+1);
+            }
+            newWeight += Weight[b]/(clusSize+1);
+            //std::cout<< newWeight << "  ";
+            //std::cout << "tMapper = " << tMapper << std::endl;
+	    wtol=pow(clusSize,tMapper)/(2*exp(clusSize*tMapper));
+            //std::cout<< wtol*avgWeight << "  ";
+            float diff;
+            if (newWeight>avgWeight)
+                diff=newWeight-avgWeight;
+            else
+                diff=avgWeight-newWeight;
+            //std::cout<< diff << "\n";
+            if (diff < wtol*avgWeight) {
                 clus[clusSize]=b;
                 clusSize++;
+                for (j=0; j<clusSize; j++) {
+                    std::cout<< clus[j] << "  ";
+                }
+                std::cout << "\n";
             }
-            if (flag==1) flag=0;
             else break;
-            for (j=0; j<clusSize; j++) {
-                //std::cout<< clus[j] << "  ";
-            }
-            //std::cout << "\n";
         }
         for (j=0; j<clusSize; j++) {
             //std::cout<< clus[j] << "  ";
